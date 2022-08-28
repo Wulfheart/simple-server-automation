@@ -7,7 +7,8 @@ const (
 
 type SSHAuthType string
 
-type Executable interface {
+type CanExecuteTasks interface {
+	Execute(t ...Task) error
 }
 
 type SSHConfig struct {
