@@ -10,6 +10,8 @@ require (
 	github.com/caarlos0/env v3.5.0+incompatible // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
+	github.com/gosuri/uilive v0.0.4 // indirect
+	github.com/gosuri/uiprogress v0.0.1 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/helloyi/go-sshclient v1.1.1 // indirect
 	github.com/itchyny/gojq v0.12.7 // indirect
