@@ -7,7 +7,6 @@ import (
 	"time"
 
 	"github.com/gosuri/uiprogress"
-	"github.com/gosuri/uiprogress/util/strutil"
 )
 
 var steps = []string{
@@ -35,13 +34,14 @@ func main() {
 }
 
 func deploy(app string, wg *sync.WaitGroup) {
+	app = "    " + app
 	defer wg.Done()
 	bar := uiprogress.AddBar(len(steps)).AppendCompleted().PrependElapsed()
 	bar.Width = 20
 
 	// prepend the deploy step to the bar
 	bar.PrependFunc(func(b *uiprogress.Bar) string {
-		return strutil.Resize(app+": "+steps[b.Current()-1], 30)
+		return app + ": " + steps[b.Current()-1]
 	})
 
 	rand.Seed(500)
